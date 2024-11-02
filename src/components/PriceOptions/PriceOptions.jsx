@@ -1,4 +1,5 @@
 import PriceOption from "../PriceOption/PriceOption";
+
 const PriceOptions = () => {
     const gymPrice =[
         {
@@ -56,7 +57,7 @@ const PriceOptions = () => {
           "price": 149.99,
           "features": [
             "24/7 access to all facilities",
-            "Locker room, sauna, steam room, and private lounge access",
+            "Locker room, sauna, steam room",
             "Unlimited access to all classes and trainers",
             "Weekly personal training sessions",
             "Custom meal plans",
@@ -69,10 +70,13 @@ const PriceOptions = () => {
       
     return (
         <div>
+          <h2 className="text-7xl font-bold text-center">Best Gym in minimum cost</h2>
+            <div className="grid grid-cols-3 gap-4 text-white">
             {
                 gymPrice.map(option=>
                 <PriceOption key={option.id} option={option}></PriceOption>)
             }
+            </div>
         </div>
     );
 };
